@@ -4,7 +4,7 @@
 [![text_field_validation](https://img.shields.io/pub/v/text_field_validation.svg)](https://pub.dev/packages/text_field_validation)
 [![Dart 3](https://img.shields.io/badge/Dart-3%2B-blue.svg)](https://dart.dev/)
 [![Flutter 3.10](https://img.shields.io/badge/Flutter-3%2B-blue.svg)](https://flutter.dev/)
-[![Tests](https://img.shields.io/github/workflow/status/JhonaCodes/text_field_validation/Run%20tests/main)](https://github.com/JhonaCodes/text_field_validation/actions)
+[![Tests](https://img.shields.io/github/workflow/status/JhonaCodes/text_field_validation/build/main)](https://github.com/JhonaCodes/text_field_validation/actions)
 
 
 
