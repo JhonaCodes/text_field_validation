@@ -4,8 +4,9 @@
 [![text_field_validation](https://img.shields.io/pub/v/text_field_validation.svg)](https://pub.dev/packages/text_field_validation)
 [![Dart 3](https://img.shields.io/badge/Dart-3%2B-blue.svg)](https://dart.dev/)
 [![Flutter 3.10](https://img.shields.io/badge/Flutter-3%2B-blue.svg)](https://flutter.dev/)
-[![Flutter tests](https://github.com/JhonaCodes/text_field_validation/actions/workflows/main.yml/badge.svg)](https://github.com/JhonaCodes/text_field_validation/actions/workflows/main.yml)
-[![Dart tests](https://github.com/JhonaCodes/text_field_validation/actions/workflows/main.yml/badge.svg)](https://github.com/JhonaCodes/text_field_validation/actions/workflows/main.yml)
+[//]: # ([![Flutter tests]&#40;https://github.com/JhonaCodes/text_field_validation/actions/workflows/main.yml/badge.svg&#41;]&#40;https://github.com/JhonaCodes/text_field_validation/actions/workflows/main.yml&#41;)
+
+[//]: # ([![Dart tests]&#40;https://github.com/JhonaCodes/text_field_validation/actions/workflows/main.yml/badge.svg&#41;]&#40;https://github.com/JhonaCodes/text_field_validation/actions/workflows/main.yml&#41;)
 
 
 
