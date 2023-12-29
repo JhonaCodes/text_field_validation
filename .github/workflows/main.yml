@@ -1,4 +1,4 @@
-name: Flutter Test CI
+name: Dart CI
 
 on:
   push:
@@ -7,16 +7,13 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-java@v1
-        with:
-          java-version: '12.x'
-      - uses: subosito/flutter-action@v1
-        with:
-          flutter-version: '2.0.4'
-      - run: flutter pub get
-      - run: flutter test
+      - uses: dart-lang/setup-dart@v1
+      - name: Install dependencies
+        run: dart pub get
+      - name: Run tests
+        run: dart test
