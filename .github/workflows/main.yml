@@ -19,4 +19,12 @@ jobs:
         run: dart pub get
 
       - name: Run tests
-        run: dart test
+        run: |
+          dart test | tee test_output.txt
+          if grep -q "All tests passed!" test_output.txt; then
+            echo "Tests passed!"
+          else
+            echo "Tests failed!"
+            exit 1
+          fi
+
