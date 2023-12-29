@@ -67,6 +67,13 @@ key: _formKey,
 )
 ```
 
+## Screens:
+
+<img width="413" alt="simple_empty_text_form_field" src="https://github.com/JhonaCodes/text_field_validation/assets/53523825/b0c8df3d-1d54-4ea9-afde-5ed331b30693">
+
+<img width="410" alt="wrong_data" src="https://github.com/JhonaCodes/text_field_validation/assets/53523825/a3e335c7-915f-4e3f-9986-deab9523b90a">
+
+
 ## Contributions
 Contributions are welcome! If you find a bug or want to add new features, please open an issue or submit a pull request.
 
