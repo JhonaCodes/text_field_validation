@@ -7,7 +7,7 @@ void main(){
   group("ADDRESS_VALIDATION_TEST", () {
 
     test('Social Security Number Validation', () {
-      expect(TextFieldValidation.socialSecurityNumber('123-45-6789A'), null);
+      expect(TextFieldValidation.socialSecurityNumber('123-45-6789'), null);
       expect(TextFieldValidation.socialSecurityNumber('123-45-67890'), 'Please enter a valid social security number');
       expect(TextFieldValidation.socialSecurityNumber(''), 'Social security number is required');
     });
