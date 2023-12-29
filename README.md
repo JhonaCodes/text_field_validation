@@ -1,5 +1,12 @@
 # TextFieldValidation Package
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![text_field_validation](https://img.shields.io/pub/v/text_field_validation.svg)](https://pub.dev/packages/text_field_validation)
+[![Dart 3](https://img.shields.io/badge/Dart-3%2B-blue.svg)](https://dart.dev/)
+[![Flutter 3.10](https://img.shields.io/badge/Flutter-3%2B-blue.svg)](https://flutter.dev/)
+[![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen)](ENLACE_A_TUS_PRUEBAS)
+
+
 The `text_field_validation` package provides utilities for validating various types of data entered into a `TextField` within a Flutter application. It is designed to be used with the `Form` widget to ensure proper data validation.
 
 ## Features
