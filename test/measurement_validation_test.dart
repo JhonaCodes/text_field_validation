@@ -5,7 +5,7 @@ import 'package:text_field_validation/src/validation/text_field_validation.dart'
 void main(){
   group("MEASUREMENTS_VALIDATION_TEST", () {
     test("weights_empty_validation_test", () {
-      expect(TextFieldValidation.weights(""), 'Weights are required');
+      expect(TextFieldValidation.weights(""), 'Weights is required');
     });
 
     test("weights_valid_test", () {

@@ -10,6 +10,7 @@ void main(){
       expect(TextFieldValidation.socialSecurityNumber('123-45-6789'), null);
       expect(TextFieldValidation.socialSecurityNumber('123-45-67890'), 'Please enter a valid social security number');
       expect(TextFieldValidation.socialSecurityNumber(''), 'Social security number is required');
+      expect(TextFieldValidation.socialSecurityNumber(null), 'Social security number is required');
     });
 
     test("phone_empty_validation_test", () {

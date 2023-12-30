@@ -10,7 +10,7 @@ void main(){
     });
 
     test("bitcoin_address_invalid_test", () {
-      expect(TextFieldValidation.bitcoinAddress("invalidBitcoinAddress"), 'Please enter a valid Bitcoin address');
+      expect(TextFieldValidation.bitcoinAddress("invalidBitcoinAddress"), 'Please enter a valid bitcoin address');
     });
 
     test("bitcoin_address_valid_test", () {
@@ -23,7 +23,7 @@ void main(){
     });
 
     test("ethereum_address_invalid_test", () {
-      expect(TextFieldValidation.ethereumAddress("invalidEthereumAddress"), 'Please enter a valid Ethereum address');
+      expect(TextFieldValidation.ethereumAddress("invalidEthereumAddress"), 'Please enter a valid ethereum address');
     });
 
     test("ethereum_address_valid_test", () {
@@ -36,7 +36,7 @@ void main(){
     });
 
     test("ripple_address_invalid_test", () {
-      expect(TextFieldValidation.rippleAddress("invalidRippleAddress"), 'Please enter a valid Ripple address');
+      expect(TextFieldValidation.rippleAddress("invalidRippleAddress"), 'Please enter a valid ripple address');
     });
 
     /// Testing Litecoin address validation using [TextFieldValidation.litecoinAddress].
@@ -45,7 +45,7 @@ void main(){
     });
 
     test("litecoin_address_invalid_test", () {
-      expect(TextFieldValidation.litecoinAddress("invalidLitecoinAddress"), 'Please enter a valid Litecoin address');
+      expect(TextFieldValidation.litecoinAddress("invalidLitecoinAddress"), 'Please enter a valid litecoin address');
     });
 
 
@@ -55,7 +55,7 @@ void main(){
     });
 
     test("algorand_address_invalid_test", () {
-      expect(TextFieldValidation.algorandAddress("invalidAlgorandAddress"), 'Please enter a valid Algorand address');
+      expect(TextFieldValidation.algorandAddress("invalidAlgorandAddress"), 'Please enter a valid algorand address');
     });
 
 
@@ -65,7 +65,7 @@ void main(){
     });
 
     test("tether_address_invalid_test", () {
-      expect(TextFieldValidation.tetherAddress("invalidTetherAddress"), 'Please enter a valid Tether address');
+      expect(TextFieldValidation.tetherAddress("invalidTetherAddress"), 'Please enter a valid tether address');
     });
 
 
@@ -75,7 +75,7 @@ void main(){
     });
 
     test("monero_address_invalid_test", () {
-      expect(TextFieldValidation.moneroAddress("invalidMoneroAddress"), 'Please enter a valid Monero address');
+      expect(TextFieldValidation.moneroAddress("invalidMoneroAddress"), 'Please enter a valid monero address');
     });
 
   });

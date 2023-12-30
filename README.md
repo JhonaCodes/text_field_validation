@@ -24,7 +24,7 @@ The `text_field_validation` package provides utilities for validating various ty
 
 ```yaml
 dependencies: 
-  text_field_validation: ^0.2.2
+  text_field_validation: ^0.3.0
 ```
 
 1. Run flutter packages get to install the package.
@@ -92,6 +92,7 @@ This package is licensed under the MIT License - see the LICENSE file for detail
 
 # Test Results Index
 
+- [Test Results - Tests_in_address_validation_test_dart.html](Test%20Results%20-%20Tests_in_address_validation_test_dart.html)
 - [Test Results - tests_in_card_validation_test_dart.html](Test%20Results%20-%20tests_in_card_validation_test_dart.html)
 - [Test Results - tests_in_cripto_address_validation_test_dart.html](Test%20Results%20-%20tests_in_cripto_address_validation_test_dart.html)
 - [Test Results - tests_in_data_validation__test_dart.html](Test%20Results%20-%20tests_in_data_validation__test_dart.html)

@@ -10,7 +10,7 @@ void main(){
     });
 
     test("iswc_invalid_test", () {
-      expect(TextFieldValidation.ISWC("invalidISWC"), 'Please enter a valid ISWC');
+      expect(TextFieldValidation.ISWC("invalidISWC"), 'Please enter a valid iswc');
     });
 
     test("iswc_valid_test", () {

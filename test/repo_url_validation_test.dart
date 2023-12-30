@@ -9,7 +9,7 @@ void main(){
     });
 
     test("github_invalid_test", () {
-      expect(TextFieldValidation.gitHub("invalid_github_url"), 'Please enter a valid GitHub URL');
+      expect(TextFieldValidation.gitHub("invalid_github_url"), 'Please enter a valid github url');
     });
 
     test("github_valid_test", () {
@@ -21,7 +21,7 @@ void main(){
     });
 
     test("gitlab_invalid_test", () {
-      expect(TextFieldValidation.gitLab("invalid_gitlab_url"), 'Please enter a valid GitLab URL');
+      expect(TextFieldValidation.gitLab("invalid_gitlab_url"), 'Please enter a valid gitlab url');
     });
 
     test("gitlab_valid_test", () {
@@ -33,7 +33,7 @@ void main(){
     });
 
     test("captcha_invalid_test", () {
-      expect(TextFieldValidation.captcha("invalid_captcha"), 'Please enter a valid Captcha');
+      expect(TextFieldValidation.captcha("invalid_captcha"), 'Please enter a valid captcha');
     });
 
     test("captcha_valid_test", () {

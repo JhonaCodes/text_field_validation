@@ -11,7 +11,7 @@ void main(){
     });
 
     test("iban_invalid_test", () {
-      expect(TextFieldValidation.IBAN("invalidIBAN"), 'Please enter a valid IBAN');
+      expect(TextFieldValidation.IBAN("invalidIBAN"), 'Please enter a valid iban');
     });
 
     test("iban_valid_test", () {

@@ -1,5 +1,7 @@
+/// The [RegularExpression] class container a static methods for validate data by regular expression.
+///
+///Each method return a [bool] value, if the value is true, the data is valid, else the data is invalid.
 class RegularExpression {
-
   /// Validate email
   static bool validateEmail(String email) => regExp(r'^[\w-\.]+@([\w-]+\.)+[a-zA-Z]{2,}$', email);
 
@@ -7,7 +9,8 @@ class RegularExpression {
   static bool validatePassword(String password) => regExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$', password);
 
   /// Validate strict password
-  static bool validateStrictPassword(String password) => regExp(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$', password);
+  static bool validateStrictPassword(String password) =>
+      regExp(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$', password);
 
   /// Validate name
   static bool validateName(String name) => regExp(r'^[a-zA-Z ]+$', name);
@@ -63,8 +66,6 @@ class RegularExpression {
   /// Validate card country
   static bool validateCardCountry(String cardCountry) => regExp(r'^[a-zA-Z ]+$', cardCountry);
 
-
-
   /// validate year
   static bool validateYear(String year) => regExp(r'^[0-9]{4}$', year);
 
@@ -108,24 +109,30 @@ class RegularExpression {
   static bool validateDateBornMMDDYYYY3(String dateBorn) => regExp(r'^[0-9]{2}\ [0-9]{2}\ [0-9]{4}$', dateBorn);
 
   /// Number of social security
-  static bool validateSocialSecurityNumber(String socialSecurityNumber) => regExp(r'^[0-9]{3}\-[0-9]{2}\-[0-9]{4}$', socialSecurityNumber);
+  static bool validateSocialSecurityNumber(String socialSecurityNumber) =>
+      regExp(r'^[0-9]{3}\-[0-9]{2}\-[0-9]{4}$', socialSecurityNumber);
 
   /// Validate url
   static bool validateUrl(String url) => regExp(r'^(https?|ftp):\/\/[^\s\/$.?#].[^\s]*$', url);
 
   /// Validate hexadecimal color
-  static bool validateHexadecimalColor(String hexadecimalColor) => regExp(r'^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$', hexadecimalColor);
+  static bool validateHexadecimalColor(String hexadecimalColor) =>
+      regExp(r'^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$', hexadecimalColor);
 
   /// Validate IPv4
   static bool validateIPv4(String ipv4) => regExp(r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}', ipv4);
 
   /// Validate IPv6
-  static bool validateIPv6(String ipv6) => regExp(r'^([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}$|^([0-9a-fA-F]{1,4}:){1,7}:$|^([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}$|^([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}$|^([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}$|^([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}$|^([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}$|^[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})$|^:((:[0-9a-fA-F]{1,4}){1,7}|:)$', ipv6);
+  static bool validateIPv6(String ipv6) => regExp(
+      r'^([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}$|^([0-9a-fA-F]{1,4}:){1,7}:$|^([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}$|^([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}$|^([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}$|^([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}$|^([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}$|^[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})$|^:((:[0-9a-fA-F]{1,4}){1,7}|:)$',
+      ipv6);
 
   /// Validate ISBN
-  static bool validateISBN(String isbn) => regExp(r'^(?:ISBN(?:-10)?:? )?(?=[0-9]{13}$|(?=(?:[0-9]+[- ]){4})'
+  static bool validateISBN(String isbn) => regExp(
+      r'^(?:ISBN(?:-10)?:? )?(?=[0-9]{13}$|(?=(?:[0-9]+[- ]){4})'
       r'[- 0-9]{17}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9]{13}$)'
-      r'(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9]$', isbn);
+      r'(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9]$',
+      isbn);
 
   /// Validate ISIN
   static bool validateISIN(String isin) => regExp(r'^[A-Z]{2}[0-9A-Z]{9}[0-9]$', isin);
@@ -141,8 +148,6 @@ class RegularExpression {
 
   /// Validate SHA1.
   static bool validateSHA1(String sha1) => regExp(r'^[a-f0-9]{40}$', sha1);
-
-
 
   /// Validate Captcha.
   static bool validateCaptcha(String captcha) => regExp(r'^[a-zA-Z0-9]{6}$', captcha);
@@ -166,10 +171,12 @@ class RegularExpression {
   static bool validateAlphanumeric(String alphanumeric) => regExp(r'^[a-zA-Z0-9]+$', alphanumeric);
 
   /// Validate alphanumeric with spaces.
-  static bool validateAlphanumericWithSpaces(String alphanumericWithSpaces) => regExp(r'^[a-zA-Z0-9 ]+$', alphanumericWithSpaces);
+  static bool validateAlphanumericWithSpaces(String alphanumericWithSpaces) =>
+      regExp(r'^[a-zA-Z0-9 ]+$', alphanumericWithSpaces);
 
   /// Validate alphanumeric with spaces and punctuation.
-  static bool validateAlphanumericWithSpacesAndPunctuation(String alphanumericWithSpacesAndPunctuation) => regExp(r'^[a-zA-Z0-9 ,.]+$', alphanumericWithSpacesAndPunctuation);
+  static bool validateAlphanumericWithSpacesAndPunctuation(String alphanumericWithSpacesAndPunctuation) =>
+      regExp(r'^[a-zA-Z0-9 ,.]+$', alphanumericWithSpacesAndPunctuation);
 
   /// Validate Velocity.
   static bool validateVelocity(String velocity) => regExp(r'^[0-9]+([,.][0-9]+)?$', velocity);
@@ -184,17 +191,19 @@ class RegularExpression {
   static bool validateSSID(String ssid) => regExp(r'^[a-zA-Z0-9-_]+$', ssid);
 
   /// Validate IP address.
-  static bool validateIPAddress(String ipAddress) => regExp(r'^((25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})\.){3}(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})$', ipAddress);
+  static bool validateIPAddress(String ipAddress) =>
+      regExp(r'^((25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})\.){3}(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})$', ipAddress);
 
   /// Validate port.
-  static bool validatePort(String port) => regExp(r'^(?:[1-9]\d{0,4}|[1-5]\d{4}|6(?:[0-4]\d{3}|5(?:[0-4]\d{2}|5(?:[0-2]\d{1}|3[0-5]))))$', port);
+  static bool validatePort(String port) =>
+      regExp(r'^(?:[1-9]\d{0,4}|[1-5]\d{4}|6(?:[0-4]\d{3}|5(?:[0-4]\d{2}|5(?:[0-2]\d{1}|3[0-5]))))$', port);
 
   /// Validate port range.
   static bool validatePortRange(String portRange) => regExp(r'^[0-9]{1,5}(-[0-9]{1,5})?$', portRange);
 
-
   /// Validate Bitcoin address.
-  static bool validateBitcoinAddress(String bitcoinAddress) => regExp(r'^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$', bitcoinAddress);
+  static bool validateBitcoinAddress(String bitcoinAddress) =>
+      regExp(r'^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$', bitcoinAddress);
 
   /// Validate Ethereum address.
   static bool validateEthereumAddress(String ethereumAddress) => regExp(r'^0x[a-fA-F0-9]{40}$', ethereumAddress);
@@ -203,113 +212,139 @@ class RegularExpression {
   static bool validateRippleAddress(String rippleAddress) => regExp(r'^r[0-9a-zA-Z]{33}$', rippleAddress);
 
   /// Validate Litecoin address.
-  static bool validateLitecoinAddress(String litecoinAddress) => regExp(r'^[LM3][a-km-zA-HJ-NP-Z1-9]{26,33}$', litecoinAddress);
+  static bool validateLiteCoinAddress(String litecoinAddress) =>
+      regExp(r'^[LM3][a-km-zA-HJ-NP-Z1-9]{26,33}$', litecoinAddress);
 
   /// Validate Algorand address.
-  static bool validateAlgorandAddress(String algorandAddress) => regExp(r'^[A-Z2-7]{58}$', algorandAddress);
+  static bool validateAlgoRandAddress(String algorandAddress) => regExp(r'^[A-Z2-7]{58}$', algorandAddress);
 
   /// Validate Tether address.
-  static bool validateTetherAddress(String tetherAddress) => regExp(r'^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$', tetherAddress);
+  static bool validateTetherAddress(String tetherAddress) =>
+      regExp(r'^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$', tetherAddress);
 
   /// Validate Monero address.
-  static bool validateMoneroAddress(String moneroAddress) => regExp(r'^4[0-9AB][1-9A-HJ-NP-Za-km-z]{93}$', moneroAddress);
+  static bool validateMoneroAddress(String moneroAddress) =>
+      regExp(r'^4[0-9AB][1-9A-HJ-NP-Za-km-z]{93}$', moneroAddress);
 
   /// Validate IBAN.
   static bool validateIBAN(String iban) => regExp(r'^[A-Z]{2}[0-9]{2}[a-zA-Z0-9]{1,30}$', iban);
 
   /// Validate ISRC.
-  static bool validateISRC(String isrc) => regExp(r'^[A-Z]{2}-?[A-Z0-9]{3}-?[0-9]{2}-?[0-9]{5}$', isrc);
+  static bool validateISRC(String iSrc) => regExp(r'^[A-Z]{2}-?[A-Z0-9]{3}-?[0-9]{2}-?[0-9]{5}$', iSrc);
 
   /// Validate ISWC.
-  static bool validateISWC(String iswc) => regExp(r'^T-[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]$', iswc);
+  static bool validateISWC(String iSwc) => regExp(r'^T-[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]$', iSwc);
 
   /// Validate YouTube.
-  static bool validateYouTube(String youTube) => regExp(r'^https:\/\/(www\.)?youtube\.com\/watch\?v=[a-zA-Z0-9_-]+$', youTube);
+  static bool validateYouTube(String youTube) =>
+      regExp(r'^https:\/\/(www\.)?youtube\.com\/watch\?v=[a-zA-Z0-9_-]+$', youTube);
 
   /// Validate QR.
   static bool validateQR(String qr) => regExp(r'^https:\/\/(www\.)?qr\.code\.com\/[a-zA-Z0-9_-]+$', qr);
 
   /// Validate Google Play.
-  static bool validateGooglePlay(String googlePlay) => regExp(r'^https:\/\/play\.google\.com\/store\/apps\/details\?id=[a-zA-Z0-9._%+-]+(&[a-zA-Z0-9._%+-]+=[a-zA-Z0-9._%+-]+)*$', googlePlay);
+  static bool validateGooglePlay(String googlePlay) => regExp(
+      r'^https:\/\/play\.google\.com\/store\/apps\/details\?id=[a-zA-Z0-9._%+-]+(&[a-zA-Z0-9._%+-]+=[a-zA-Z0-9._%+-]+)*$',
+      googlePlay);
 
   /// Validate Google Drive.
-  static bool validateGoogleDrive(String googleDrive) => regExp(r'^https:\/\/(www\.)?drive\.google\.com\/file\/d\/[a-zA-Z0-9_-]+$', googleDrive);
+  static bool validateGoogleDrive(String googleDrive) =>
+      regExp(r'^https:\/\/(www\.)?drive\.google\.com\/file\/d\/[a-zA-Z0-9_-]+$', googleDrive);
 
   /// Validate Google Maps.
-  static bool validateGoogleMaps(String googleMaps) => regExp(r'^https:\/\/(www\.)?google\.com\/maps\/place\/[a-zA-Z0-9_-]+$', googleMaps);
+  static bool validateGoogleMaps(String googleMaps) =>
+      regExp(r'^https:\/\/(www\.)?google\.com\/maps\/place\/[a-zA-Z0-9_-]+$', googleMaps);
 
   /// Validate Google Calendar.
-  static bool validateGoogleCalendar(String googleCalendar) => regExp(r'^https:\/\/(www\.)?calendar\.google\.com\/event\?action=TEMPLATE&text=[a-zA-Z0-9_-]+$', googleCalendar);
+  static bool validateGoogleCalendar(String googleCalendar) =>
+      regExp(r'^https:\/\/(www\.)?calendar\.google\.com\/event\?action=TEMPLATE&text=[a-zA-Z0-9_-]+$', googleCalendar);
 
   /// Validate Google Mail.
-  static bool validateGoogleMail(String googleMail) => regExp(r'^https:\/\/(www\.)?mail\.google\.com\/mail\/u\/[0-9]+\/#inbox\/[a-zA-Z0-9_-]+$', googleMail);
+  static bool validateGoogleMail(String googleMail) =>
+      regExp(r'^https:\/\/(www\.)?mail\.google\.com\/mail\/u\/[0-9]+\/#inbox\/[a-zA-Z0-9_-]+$', googleMail);
 
   /// Validate Google Account.
-  static bool validateGoogleAccount(String googleAccount) => regExp(r'^https:\/\/(www\.)?accounts\.google\.com\/[a-zA-Z0-9_-]+$', googleAccount);
+  static bool validateGoogleAccount(String googleAccount) =>
+      regExp(r'^https:\/\/(www\.)?accounts\.google\.com\/[a-zA-Z0-9_-]+$', googleAccount);
 
   /// Validate Google Hangouts.
-  static bool validateGoogleHangouts(String googleHangouts) => regExp(r'^https:\/\/(www\.)?hangouts\.google\.com\/[a-zA-Z0-9_-]+$', googleHangouts);
+  static bool validateGoogleHangouts(String googleHangouts) =>
+      regExp(r'^https:\/\/(www\.)?hangouts\.google\.com\/[a-zA-Z0-9_-]+$', googleHangouts);
 
   /// Validate Google Classroom.
-  static bool validateGoogleClassroom(String googleClassroom) => regExp(r'^https:\/\/(www\.)?classroom\.google\.com\/[a-zA-Z0-9_-]+$', googleClassroom);
+  static bool validateGoogleClassroom(String googleClassroom) =>
+      regExp(r'^https:\/\/(www\.)?classroom\.google\.com\/[a-zA-Z0-9_-]+$', googleClassroom);
 
   /// Validate Google Docs.
-  static bool validateGoogleDocs(String googleDocs) => regExp(r'^https:\/\/(www\.)?docs\.google\.com\/document\/d\/[a-zA-Z0-9_-]+$', googleDocs);
+  static bool validateGoogleDocs(String googleDocs) =>
+      regExp(r'^https:\/\/(www\.)?docs\.google\.com\/document\/d\/[a-zA-Z0-9_-]+$', googleDocs);
 
   /// Validate Google Forms.
-  static bool validateGoogleForms(String googleForms) => regExp(r'^https:\/\/(www\.)?docs\.google\.com\/forms\/d\/[a-zA-Z0-9_-]+$', googleForms);
+  static bool validateGoogleForms(String googleForms) =>
+      regExp(r'^https:\/\/(www\.)?docs\.google\.com\/forms\/d\/[a-zA-Z0-9_-]+$', googleForms);
 
   /// Validate Google Sheets.
-  static bool validateGoogleSheets(String googleSheets) => regExp(r'^https:\/\/(www\.)?docs\.google\.com\/spreadsheets\/d\/[a-zA-Z0-9_-]+$', googleSheets);
+  static bool validateGoogleSheets(String googleSheets) =>
+      regExp(r'^https:\/\/(www\.)?docs\.google\.com\/spreadsheets\/d\/[a-zA-Z0-9_-]+$', googleSheets);
 
   /// Validate Google Slides.
-  static bool validateGoogleSlides(String googleSlides) => regExp(r'^https:\/\/(www\.)?docs\.google\.com\/presentation\/d\/[a-zA-Z0-9_-]+$', googleSlides);
+  static bool validateGoogleSlides(String googleSlides) =>
+      regExp(r'^https:\/\/(www\.)?docs\.google\.com\/presentation\/d\/[a-zA-Z0-9_-]+$', googleSlides);
 
   /// Validate Google Drawings.
-  static bool validateGoogleDrawings(String googleDrawings) => regExp(r'^https:\/\/(www\.)?docs\.google\.com\/drawings\/d\/[a-zA-Z0-9_-]+$', googleDrawings);
+  static bool validateGoogleDrawings(String googleDrawings) =>
+      regExp(r'^https:\/\/(www\.)?docs\.google\.com\/drawings\/d\/[a-zA-Z0-9_-]+$', googleDrawings);
 
   /// Validate Google Sites.
-  static bool validateGoogleSites(String googleSites) => regExp(r'^https:\/\/(www\.)?sites\.google\.com\/[a-zA-Z0-9_-]+$', googleSites);
+  static bool validateGoogleSites(String googleSites) =>
+      regExp(r'^https:\/\/(www\.)?sites\.google\.com\/[a-zA-Z0-9_-]+$', googleSites);
 
   /// Validate Google Keep.
-  static bool validateGoogleKeep(String googleKeep) => regExp(r'^https:\/\/(www\.)?keep\.google\.com\/[a-zA-Z0-9_-]+$', googleKeep);
+  static bool validateGoogleKeep(String googleKeep) =>
+      regExp(r'^https:\/\/(www\.)?keep\.google\.com\/[a-zA-Z0-9_-]+$', googleKeep);
 
   /// Validate linkedin.
-  static bool validateLinkedin(String linkedin) => regExp(r'^https:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+$', linkedin);
+  static bool validateLinkedin(String linkedin) =>
+      regExp(r'^https:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+$', linkedin);
 
   /// Validate Facebook.
-  static bool validateFacebook(String facebook) => regExp(r'^https:\/\/(www\.)?facebook\.com\/[a-zA-Z0-9_-]+$', facebook);
+  static bool validateFacebook(String facebook) =>
+      regExp(r'^https:\/\/(www\.)?facebook\.com\/[a-zA-Z0-9_-]+$', facebook);
 
   /// Validate Twitter.
   static bool validateTwitter(String twitter) => regExp(r'^https:\/\/(www\.)?twitter\.com\/[a-zA-Z0-9_-]+$', twitter);
 
   /// Validate Instagram.
-  static bool validateInstagram(String instagram) => regExp(r'^https:\/\/(www\.)?instagram\.com\/[a-zA-Z0-9_-]+$', instagram);
+  static bool validateInstagram(String instagram) =>
+      regExp(r'^https:\/\/(www\.)?instagram\.com\/[a-zA-Z0-9_-]+$', instagram);
 
   /// Validate Pinterest.
-  static bool validatePinterest(String pinterest) => regExp(r'^https:\/\/(www\.)?pinterest\.com\/[a-zA-Z0-9_-]+$', pinterest);
+  static bool validatePinterest(String pinterest) =>
+      regExp(r'^https:\/\/(www\.)?pinterest\.com\/[a-zA-Z0-9_-]+$', pinterest);
 
   /// Validate Tumblr.
-  static bool validateTumblr(String tumblr) => regExp(r'^https:\/\/(www\.)?tumblr\.com\/(?:blog\/[a-zA-Z0-9_-]+|(?:[a-zA-Z0-9_-]+\.tumblr\.com))$', tumblr);
+  static bool validateTumblr(String tumblr) =>
+      regExp(r'^https:\/\/(www\.)?tumblr\.com\/(?:blog\/[a-zA-Z0-9_-]+|(?:[a-zA-Z0-9_-]+\.tumblr\.com))$', tumblr);
 
   /// Validate Snapchat.
-  static bool validateSnapchat(String snapchat) => regExp(r'^https:\/\/(www\.)?snapchat\.com\/add\/[a-zA-Z0-9_-]+$', snapchat);
+  static bool validateSnapchat(String snapchat) =>
+      regExp(r'^https:\/\/(www\.)?snapchat\.com\/add\/[a-zA-Z0-9_-]+$', snapchat);
 
   /// Validate Reddit.
-  static bool validateReddit(String reddit) => regExp(r'^https:\/\/(www\.)?reddit\.com\/user\/[a-zA-Z0-9_-]+\/?$', reddit);
+  static bool validateReddit(String reddit) =>
+      regExp(r'^https:\/\/(www\.)?reddit\.com\/user\/[a-zA-Z0-9_-]+\/?$', reddit);
 
   /// Validate GitHub.
-  static bool validateGitHub(String gitHub) => regExp(r'^https:\/\/(www\.)?github\.com\/user\/[a-zA-Z0-9_-]+\/?$', gitHub);
+  static bool validateGitHub(String gitHub) =>
+      regExp(r'^https:\/\/(www\.)?github\.com\/user\/[a-zA-Z0-9_-]+\/?$', gitHub);
 
   /// Validate GitLab.
-  static bool validateGitLab(String gitLab) => regExp(r'^https:\/\/(www\.)?gitlab\.com\/user\/[a-zA-Z0-9_-]+\/?$', gitLab);
-
-
+  static bool validateGitLab(String gitLab) =>
+      regExp(r'^https:\/\/(www\.)?gitlab\.com\/user\/[a-zA-Z0-9_-]+\/?$', gitLab);
 
   /// regExp
   static bool regExp(String regExp, dynamic value) {
     final RegExp _regExp = RegExp(regExp);
     return !_regExp.hasMatch(value);
   }
-
 }

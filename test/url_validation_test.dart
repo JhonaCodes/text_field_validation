@@ -7,8 +7,9 @@ void main(){
 
     test('URL Validation', () {
       expect(TextFieldValidation.url('http://www.example.com'), null);
-      expect(TextFieldValidation.url('example.com'), 'Please enter a valid URL');
+      expect(TextFieldValidation.url('example.com'), 'Please enter a valid url');
       expect(TextFieldValidation.url(''), 'URL is required');
+      expect(TextFieldValidation.url(null), 'URL is required');
     });
 
     /// Testing YouTube link validation using [TextFieldValidation.youTube].
@@ -17,7 +18,7 @@ void main(){
     });
 
     test("youtube_invalid_test", () {
-      expect(TextFieldValidation.youTube("invalidYouTubeLink"), 'Please enter a valid YouTube link');
+      expect(TextFieldValidation.youTube("invalidYouTubeLink"), 'Please enter a valid youtube link');
     });
 
     test("youtube_valid_test", () {
@@ -30,7 +31,7 @@ void main(){
     });
 
     test("qr_invalid_test", () {
-      expect(TextFieldValidation.qr("invalidQRCodeLink"), 'Please enter a valid QR code link');
+      expect(TextFieldValidation.qr("invalidQRCodeLink"), 'Please enter a valid qr code link');
     });
 
     test("qr_valid_test", () {
@@ -43,7 +44,7 @@ void main(){
     });
 
     test("googlePlay_invalid_test", () {
-      expect(TextFieldValidation.googlePlay("https://ply.google.com/store/apps/details?id=comnacode.epicfablehare"), 'Please enter a valid Google Play link');
+      expect(TextFieldValidation.googlePlay("https://ply.google.com/store/apps/details?id=comnacode.epicfablehare"), 'Please enter a valid google play link');
     });
 
     test("googlePlay_valid_test", () {
@@ -56,7 +57,7 @@ void main(){
     });
 
     test("googleDrive_invalid_test", () {
-      expect(TextFieldValidation.googleDrive("invalidGoogleDriveLink"), 'Please enter a valid Google Drive link');
+      expect(TextFieldValidation.googleDrive("invalidGoogleDriveLink"), 'Please enter a valid google drive link');
     });
 
     test("googleDrive_valid_test", () {
@@ -69,7 +70,7 @@ void main(){
     });
 
     test("googleMaps_invalid_test", () {
-      expect(TextFieldValidation.googleMaps("invalidGoogleMapsLink"), 'Please enter a valid Google Maps link');
+      expect(TextFieldValidation.googleMaps("invalidGoogleMapsLink"), 'Please enter a valid google maps link');
     });
 
     test("googleMaps_valid_test", () {
@@ -82,7 +83,7 @@ void main(){
     });
 
     test("googleCalendar_invalid_test", () {
-      expect(TextFieldValidation.googleCalendar("invalidGoogleCalendarLink"), 'Please enter a valid Google Calendar link');
+      expect(TextFieldValidation.googleCalendar("invalidGoogleCalendarLink"), 'Please enter a valid google calendar link');
     });
 
     test("googleCalendar_valid_test", () {
@@ -95,7 +96,7 @@ void main(){
     });
 
     test("googleMail_invalid_test", () {
-      expect(TextFieldValidation.googleMail("invalidGoogleMailLink"), 'Please enter a valid Google Mail link');
+      expect(TextFieldValidation.googleMail("invalidGoogleMailLink"), 'Please enter a valid google mail link');
     });
 
     test("googleMail_valid_test", () {

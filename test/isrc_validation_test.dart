@@ -10,7 +10,7 @@ void main(){
     });
 
     test("isrc_invalid_test", () {
-      expect(TextFieldValidation.ISRC("invalidISRC"), 'Please enter a valid ISRC');
+      expect(TextFieldValidation.ISRC("invalidISRC"), 'Please enter a valid isrc');
     });
 
     test("isrc_valid_test", () {
