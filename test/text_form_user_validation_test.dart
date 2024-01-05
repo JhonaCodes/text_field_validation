@@ -33,7 +33,7 @@ void main() {
 
     test("password_valid_test", () {
       /// Verifies that the function does not return any error message when the password is valid.
-      expect(TextFieldValidation.password("Strong123456d"), null);
+      expect(TextFieldValidation.password("1ww_- @qe2"), null);
     });
 
     test("strict_password_empty_validation_test", () {

@@ -6,7 +6,7 @@ class RegularExpression {
   static bool validateEmail(String email) => regExp(r'^[\w-\.]+@([\w-]+\.)+[a-zA-Z]{2,}$', email);
 
   /// Validate password
-  static bool validatePassword(String password) => regExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$', password);
+  static bool validatePassword(String password) => regExp(r'^(?=.*[A-Za-z\d\s!@#$%^&*()-=_+{}[\]|;:",.<>?/\\])[A-Za-z\d\s!@#$%^&*()-=_+{}[\]|;:",.<>?/\\]{6,}$', password);
 
   /// Validate strict password
   static bool validateStrictPassword(String password) =>

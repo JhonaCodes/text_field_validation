@@ -29,3 +29,14 @@
 ### Developer Notes
 - Backward Compatibility:
 - * Due to internal logic changes, full compatibility with previous versions is not guaranteed. Review the updated documentation and adjust your code accordingly.
+
+### Version 0.3.1
+- Improved Password Validation
+- * The regular expression now ensures passwords contain at least one letter, one number, and one special character or space.
+- * Fixed the minimum length to exactly 6 characters to meet security requirements. 
+- * Code Optimizations
+- Adjustments were made to the regular expression to enhance accuracy and security of validations.
+- * Updated Documentation
+- Package documentation has been updated to reflect changes in password validation.
+- * Bug Fixes
+- * Addressed an issue allowing passwords with less than 6 characters.
