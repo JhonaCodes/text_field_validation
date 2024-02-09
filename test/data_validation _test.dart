@@ -16,6 +16,10 @@ void main(){
       expect(TextFieldValidation.age(""), 'Age is required');
     });
 
+    test("without_numbers_empty_validation_test", () {
+      expect(TextFieldValidation.withoutNumbers(""), 'Text is required');
+    });
+
     test("age_valid_test", () {
       expect(TextFieldValidation.age("25"), null);
     });

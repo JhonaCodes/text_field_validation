@@ -14,7 +14,7 @@ class TextFieldValidation {
     return _validateInput(password, RegularExpression.validatePassword, textResponse, 'Password');
   }
 
-  /// Validate password on strct mode
+  /// Validate password on strict mode
   static String? strictPassword(String password, {TextValidateResponse? textResponse}) {
     return _validateInput(password, RegularExpression.validateStrictPassword, textResponse, 'Password');
   }
@@ -22,6 +22,11 @@ class TextFieldValidation {
   /// Validate name
   static String? name(String name, {TextValidateResponse? textResponse}) {
     return _validateInput(name, RegularExpression.validateName, textResponse, 'Name');
+  }
+
+  /// Validate WithoutNumbers
+  static String? withoutNumbers(String text, {TextValidateResponse? textResponse}) {
+    return _validateInput(text, RegularExpression.validateWithoutNumbers, textResponse, 'Text');
   }
 
   /// Validate phone

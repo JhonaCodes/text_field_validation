@@ -24,7 +24,7 @@ The `text_field_validation` package provides utilities for validating various ty
 
 ```yaml
 dependencies: 
-  text_field_validation: ^0.3.1
+  text_field_validation: ^1.0.0
 ```
 
 1. Run flutter packages get to install the package.
