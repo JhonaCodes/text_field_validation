@@ -1,6 +1,9 @@
 # Changelog
 
 
+### Version 1.0.1
+- * Format lower camel case.
+
 ### Developer Notes
 - Multiple and extensive tests passed, now is stable version.
 

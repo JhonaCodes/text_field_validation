@@ -12,24 +12,24 @@ void main() {
     });
 
     test('MAC Address Validation', () {
-      expect(TextFieldValidation.MAC('00:1A:2B:3C:4D:5E'), null);
-      expect(TextFieldValidation.MAC('00:1A:2B:3C:4D'),
+      expect(TextFieldValidation.mac('00:1A:2B:3C:4D:5E'), null);
+      expect(TextFieldValidation.mac('00:1A:2B:3C:4D'),
           'Please enter a valid mac address');
-      expect(TextFieldValidation.MAC(''), 'MAC address is required');
+      expect(TextFieldValidation.mac(''), 'MAC address is required');
     });
 
     test('SSID Validation', () {
-      expect(TextFieldValidation.SSID('MyNetwork123'), null);
-      expect(TextFieldValidation.SSID('MyNetwork@123'),
+      expect(TextFieldValidation.ssid('MyNetwork123'), null);
+      expect(TextFieldValidation.ssid('MyNetwork@123'),
           'Please enter a valid ssid');
-      expect(TextFieldValidation.SSID(''), 'SSID is required');
+      expect(TextFieldValidation.ssid(''), 'SSID is required');
     });
 
     test('IP Address Validation', () {
-      expect(TextFieldValidation.IP('192.168.0.1'), null);
-      expect(TextFieldValidation.IP('300.500.700.900'),
+      expect(TextFieldValidation.ip('192.168.0.1'), null);
+      expect(TextFieldValidation.ip('300.500.700.900'),
           'Please enter a valid ip address');
-      expect(TextFieldValidation.IP(''), 'IP address is required');
+      expect(TextFieldValidation.ip(''), 'IP address is required');
     });
 
     test('Port Validation', () {

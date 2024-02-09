@@ -13,19 +13,19 @@ void main() {
     });
 
     test('IPv4 Validation', () {
-      expect(TextFieldValidation.IPv4('192.168.0.1'), null);
-      expect(TextFieldValidation.IPv4('300.500.700.900'),
+      expect(TextFieldValidation.iPv4('192.168.0.1'), null);
+      expect(TextFieldValidation.iPv4('300.500.700.900'),
           'Please enter a valid ipv4 address');
-      expect(TextFieldValidation.IPv4(''), 'IPv4 address is required');
+      expect(TextFieldValidation.iPv4(''), 'IPv4 address is required');
     });
 
     test('IPv6 Validation', () {
       expect(
-          TextFieldValidation.IPv6('2001:0db8:85a3:0000:0000:8a2e:0370:7334'),
+          TextFieldValidation.iPv6('2001:0db8:85a3:0000:0000:8a2e:0370:7334'),
           null);
-      expect(TextFieldValidation.IPv6('2001:0db8:85a3:0000:0000:8a2e:0370:'),
+      expect(TextFieldValidation.iPv6('2001:0db8:85a3:0000:0000:8a2e:0370:'),
           'Please enter a valid ipv6 address');
-      expect(TextFieldValidation.IPv6(''), 'IPv6 address is required');
+      expect(TextFieldValidation.iPv6(''), 'IPv6 address is required');
     });
 
     test('ISBN Validation', () {

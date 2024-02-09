@@ -523,19 +523,19 @@ class TextFieldValidation {
   }
 
   /// Validate MAC address.
-  static String? MAC(String macAddress, {TextValidateResponse? textResponse}) {
+  static String? mac(String macAddress, {TextValidateResponse? textResponse}) {
     return _validateInput(macAddress, RegularExpression.validateMACAddress,
         textResponse, 'MAC address');
   }
 
   /// Validate SSID.
-  static String? SSID(String ssid, {TextValidateResponse? textResponse}) {
+  static String? ssid(String ssid, {TextValidateResponse? textResponse}) {
     return _validateInput(
         ssid, RegularExpression.validateSSID, textResponse, 'SSID');
   }
 
   /// Validate IP address.
-  static String? IP(String ipAddress, {TextValidateResponse? textResponse}) {
+  static String? ip(String ipAddress, {TextValidateResponse? textResponse}) {
     return _validateInput(ipAddress, RegularExpression.validateIPAddress,
         textResponse, 'IP address');
   }
@@ -680,13 +680,13 @@ class TextFieldValidation {
   }
 
   /// Validate IPv4.
-  static String? IPv4(String ipv4, {TextValidateResponse? textResponse}) {
+  static String? iPv4(String ipv4, {TextValidateResponse? textResponse}) {
     return _validateInput(
         ipv4, RegularExpression.validateIPv4, textResponse, 'IPv4 address');
   }
 
   /// Validate IPv6.
-  static String? IPv6(String ipv6, {TextValidateResponse? textResponse}) {
+  static String? iPv6(String ipv6, {TextValidateResponse? textResponse}) {
     return _validateInput(
         ipv6, RegularExpression.validateIPv6, textResponse, 'IPv6 address');
   }
