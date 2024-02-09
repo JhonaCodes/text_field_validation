@@ -2,15 +2,15 @@ import 'package:test/test.dart';
 
 import 'package:text_field_validation/src/validation/text_field_validation.dart';
 
-void main(){
+void main() {
   group("CARD_VALIDATION_TEST", () {
-
     test("cardNumber_empty_validation_test", () {
       expect(TextFieldValidation.cardNumber(""), 'Card number is required');
     });
 
     test("cardNumber_invalid_test", () {
-      expect(TextFieldValidation.cardNumber("1234-5678-9012-3456"), 'Please enter a valid card number');
+      expect(TextFieldValidation.cardNumber("1234-5678-9012-3456"),
+          'Please enter a valid card number');
     });
 
     test("cardNumber_valid_test", () {
@@ -22,7 +22,8 @@ void main(){
     });
 
     test("cardHolder_invalid_test", () {
-      expect(TextFieldValidation.cardHolder("123"), 'Please enter a valid card holder');
+      expect(TextFieldValidation.cardHolder("123"),
+          'Please enter a valid card holder');
     });
 
     test("cardHolder_valid_test", () {
@@ -34,7 +35,8 @@ void main(){
     });
 
     test("cardDate_invalid_test", () {
-      expect(TextFieldValidation.cardDate("02-23"), 'Please enter a valid card date');
+      expect(TextFieldValidation.cardDate("02-23"),
+          'Please enter a valid card date');
     });
 
     test("cardDate_valid_test", () {
@@ -46,7 +48,8 @@ void main(){
     });
 
     test("cardCvv_invalid_test", () {
-      expect(TextFieldValidation.cardCvv("1234a"), 'Please enter a valid card cvv');
+      expect(TextFieldValidation.cardCvv("1234a"),
+          'Please enter a valid card cvv');
     });
 
     test("cardCvv_valid_test", () {
@@ -58,7 +61,8 @@ void main(){
     });
 
     test("cardZip_invalid_test", () {
-      expect(TextFieldValidation.cardZip("123"), 'Please enter a valid card zip');
+      expect(
+          TextFieldValidation.cardZip("123"), 'Please enter a valid card zip');
     });
 
     test("cardZip_valid_test", () {
@@ -70,7 +74,8 @@ void main(){
     });
 
     test("cardType_invalid_test", () {
-      expect(TextFieldValidation.cardType("123"), 'Please enter a valid card type');
+      expect(TextFieldValidation.cardType("123"),
+          'Please enter a valid card type');
     });
 
     test("cardType_valid_test", () {
@@ -82,7 +87,8 @@ void main(){
     });
 
     test("cardName_invalid_test", () {
-      expect(TextFieldValidation.cardName("123"), 'Please enter a valid card name');
+      expect(TextFieldValidation.cardName("123"),
+          'Please enter a valid card name');
     });
 
     test("cardName_valid_test", () {
@@ -94,7 +100,8 @@ void main(){
     });
 
     test("cardAddress_invalid_test", () {
-      expect(TextFieldValidation.cardAddress("%%!\$#"), 'Please enter a valid card address');
+      expect(TextFieldValidation.cardAddress("%%!\$#"),
+          'Please enter a valid card address');
     });
 
     test("cardAddress_valid_test", () {
@@ -106,7 +113,8 @@ void main(){
     });
 
     test("cardCity_invalid_test", () {
-      expect(TextFieldValidation.cardCity("123"), 'Please enter a valid card city');
+      expect(TextFieldValidation.cardCity("123"),
+          'Please enter a valid card city');
     });
 
     test("cardCity_valid_test", () {
@@ -118,7 +126,8 @@ void main(){
     });
 
     test("cardState_invalid_test", () {
-      expect(TextFieldValidation.cardState("12"), 'Please enter a valid card state');
+      expect(TextFieldValidation.cardState("12"),
+          'Please enter a valid card state');
     });
 
     test("cardState_valid_test", () {
@@ -130,12 +139,12 @@ void main(){
     });
 
     test("cardCountry_invalid_test", () {
-      expect(TextFieldValidation.cardCountry("12"), 'Please enter a valid card country');
+      expect(TextFieldValidation.cardCountry("12"),
+          'Please enter a valid card country');
     });
 
     test("cardCountry_valid_test", () {
       expect(TextFieldValidation.cardCountry("USA"), null);
     });
-
   });
 }

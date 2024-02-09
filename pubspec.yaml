@@ -5,9 +5,13 @@ repository: "https://github.com/JhonaCodes/text_field_validation"
 homepage: https://jhonacode.com
 
 environment:
-  sdk: '>=3.2.3 <4.0.0'
+  sdk: '>=3.2.5 <4.0.0'
+  flutter: ">=1.17.0"
 
 dev_dependencies:
+  flutter_test:
+    sdk: flutter
   lints: ^2.1.0
   test: ^1.24.3
 
+flutter:
