@@ -1,4 +1,4 @@
-name: Dart CI
+name: Dart CI && Flutter CI
 
 on:
   push:
@@ -13,7 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: dart-lang/setup-dart@v1
-      - name: Install dependencies
+      - name: Install dart dependencies
         run: dart pub get
-      - name: Run tests
+      - name: Install flutter dependencies
+        run: flutter pub get
+      - name: Run tests dart
         run: dart test
+      - name: Run tests flutter
+        run: flutter test
