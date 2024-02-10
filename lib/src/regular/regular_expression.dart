@@ -204,8 +204,7 @@ class RegularExpression {
   static bool validateDate(String date) => regExp(r'^\d{4}-\d{2}-\d{2}$', date);
 
   /// Validate number.
-  static bool validateNumber(String number) =>
-      regExp(r'^[0-9]+([,.][0-9]+)?$', number);
+  static bool validateNumber(String number) => regExp(r'^[0-9]+$', number);
 
   /// Validate alphanumeric.
   static bool validateAlphanumeric(String alphanumeric) =>

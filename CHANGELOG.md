@@ -1,6 +1,9 @@
 # Changelog
 
 
+### Version 1.0.2
+- * Fix error on validate number.
+
 ### Version 1.0.1
 - * Format lower camel case.
 
