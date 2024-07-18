@@ -1,11 +1,11 @@
 name: text_field_validation
 description: "A Flutter project for creating and managing text field validations with ease."
-version: 1.0.3
+version: 1.0.4
 repository: "https://github.com/JhonaCodes/text_field_validation"
 homepage: https://jhonacode.com
 
 environment:
-  sdk: '>=3.4.4 <4.0.0'
+  sdk: '>=3.4.3 <4.0.0'
   flutter: ">=1.17.0"
 
 dev_dependencies:
