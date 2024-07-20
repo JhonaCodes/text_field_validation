@@ -241,5 +241,4 @@ void main() {
       expect(TextFieldValidation.name("Jiří"), null);
     });
   });
-
 }
