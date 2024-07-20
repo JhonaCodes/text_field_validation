@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.1.2
+- Update Changelog format.
+- Update code format.
+---
 ### Version 1.1.1
 - Update Changelog format.
 ---
@@ -22,7 +26,6 @@
 ---
 ### Version 1.0.1
 - Format lower camel case.
----
 ### Developer Notes
 - Multiple and extensive tests passed, now is stable version.
 ---

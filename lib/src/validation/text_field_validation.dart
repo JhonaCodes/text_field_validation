@@ -733,11 +733,13 @@ class TextFieldValidation {
       _ValidationFunction validationFunction,
       TextValidateResponse? textResponse,
       String typeValidation) {
-    if (input == null || input.isEmpty)
+    if (input == null || input.isEmpty) {
       return textResponse?.empty ?? '$typeValidation is required';
-    if (validationFunction(input))
+    }
+    if (validationFunction(input)) {
       return textResponse?.invalid ??
           'Please enter a valid ${typeValidation.toLowerCase()}';
+    }
     return null;
   }
 }
