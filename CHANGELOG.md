@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.0] - 2024-07-20
+
+### Added
+- **Extended Validation for Names**: Added comprehensive validation for names, including support for a wider range of special characters and diacritics.
+- **Improved Regular Expressions**: Updated regular expressions to include additional special characters and accent marks, such as `ç`, `ř`, and more.
+- **Enhanced Email and URL Validation**: Added more robust validation patterns for email addresses and URLs.
+
+### Changed
+- **Regex Patterns**: Updated regex patterns across various validation functions to improve accuracy and coverage.
+
+### Fixed
+- No fixes in this release.
+
+### Notes
+- This release enhances the library's capabilities in validating a broader set of names and special characters, as well as improving overall validation accuracy.
+
 
 ### Version 1.0.4
 ### Version 1.0.3

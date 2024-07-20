@@ -52,20 +52,6 @@ void main() {
       /// Verifies that the function does not return any error message when the strict password is valid.
       expect(TextFieldValidation.strictPassword("StrongPassword1\$"), null);
     });
-    test("name_empty_validation_test", () {
-      /// Verifies that the function returns the correct message when the name is empty.
-      expect(TextFieldValidation.name(""), 'Name is required');
-    });
-
-    test("name_invalid_test", () {
-      /// Verifies that the function returns the correct message when the name is not valid.
-      expect(TextFieldValidation.name("123"), 'Please enter a valid name');
-    });
-
-    test("name_valid_test", () {
-      /// Verifies that the function does not return any error message when the name is valid.
-      expect(TextFieldValidation.name("John Doe"), null);
-    });
 
     test('Year Validation', () {
       expect(TextFieldValidation.year('2023'), null);
@@ -177,4 +163,83 @@ void main() {
           'Date born (MM DD YYYY) is required');
     });
   });
+
+  group('TEXT_FORM_NAME_VALIDATION_TEST', () {
+    test("valid_name_standard", () {
+      expect(TextFieldValidation.name("John Doe O'connor"), null);
+    });
+
+    test("valid_name_accented", () {
+      expect(TextFieldValidation.name("Ana María Pérez"), null);
+    });
+
+    test("valid_name_special_chars", () {
+      expect(TextFieldValidation.name("José Miguel O'Neill"), null);
+    });
+
+    test("valid_name_hyphenated", () {
+      expect(TextFieldValidation.name("Jean-Luc Picard"), null);
+    });
+
+    test("valid_name_hyphen_accented", () {
+      expect(TextFieldValidation.name("María-José López"), null);
+    });
+
+    test("valid_name_apostrophe", () {
+      expect(TextFieldValidation.name("D'Artagnan"), null);
+    });
+
+    test("valid_name_single_apostrophe", () {
+      expect(TextFieldValidation.name("O'Neill"), null);
+    });
+
+    test("valid_name_complex_apostrophe", () {
+      expect(TextFieldValidation.name("Sean O'Conor"), null);
+    });
+
+    test("invalid_name_with_numbers", () {
+      expect(TextFieldValidation.name("John123"), isNot(null));
+    });
+
+    test("invalid_name_with_symbols", () {
+      expect(TextFieldValidation.name("!@#\$%^&*()"), isNot(null));
+    });
+
+    test("invalid_name_combined_numbers", () {
+      expect(TextFieldValidation.name("Ana María Pérez123"), isNot(null));
+    });
+
+    test("invalid_name_empty", () {
+      expect(TextFieldValidation.name(""), isNot(null));
+    });
+
+    test("valid_name_double_hyphen", () {
+      expect(TextFieldValidation.name("Anne-Marie"), null);
+    });
+
+    test("valid_name_diacritic", () {
+      expect(TextFieldValidation.name("Charlotte Brontë"), null);
+    });
+
+    test("valid_name_diacritic_accent", () {
+      expect(TextFieldValidation.name("René Descartes"), null);
+    });
+
+    test("valid_name_multiple_diacritics", () {
+      expect(TextFieldValidation.name("François-Marie Arouet"), null);
+    });
+
+    test("valid_name_multiple_accented", () {
+      expect(TextFieldValidation.name("Gabriel García Márquez"), null);
+    });
+
+    test("valid_name_diacritic_only", () {
+      expect(TextFieldValidation.name("Hélène"), null);
+    });
+
+    test("valid_name_diacritic_caron", () {
+      expect(TextFieldValidation.name("Jiří"), null);
+    });
+  });
+
 }

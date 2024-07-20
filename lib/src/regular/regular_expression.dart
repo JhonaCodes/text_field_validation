@@ -20,7 +20,7 @@ class RegularExpression {
       password);
 
   /// Validate name
-  static bool validateName(String name) => regExp(r'^[a-zA-Z ]+$', name);
+  static bool validateName(String name) => regExp(r"^[a-zA-ZàèìòùÀÈÌÒÙáéíóúÁÉÍÓÚäëïöüÄËÏÖÜñÑçÇřŘšŠžŽ`' -]+$", name);
 
   /// Validate phone
   static bool validatePhone(String phone) => regExp(r'^[0-9]{10}$', phone);
