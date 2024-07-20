@@ -1,5 +1,8 @@
 # Changelog
 
+### Version 1.1.3
+- Dart format.
+---
 ### Version 1.1.2
 - Update Changelog format.
 - Update code format.
