@@ -1,7 +1,11 @@
 # Changelog
 
+### Version 1.1.5
+- Update readme.
+- Update SDK version
+
 ### Version 1.1.4
-- Password minimum 9 characters.
+- Password minimum 6 characters.
 ---
 ### Version 1.1.3
 - Dart format.

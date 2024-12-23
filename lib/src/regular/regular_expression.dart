@@ -8,7 +8,7 @@ class RegularExpression {
 
   /// Validate password
   static bool validatePassword(String password) => regExp(
-      r'^(?=.*[A-Za-z\d\s!@#$%^&*()-=_+{}[\]|;:",.<>?/\\])[A-Za-z\d\s!@#$%^&*()-=_+{}[\]|;:",.<>?/\\]{9,}$',
+      r'^(?=.*[A-Za-z\d\s!@#$%^&*()-=_+{}[\]|;:",.<>?/\\])[A-Za-z\d\s!@#$%^&*()-=_+{}[\]|;:",.<>?/\\]{6,}$',
       password);
 
   /// Validate Without numbers
