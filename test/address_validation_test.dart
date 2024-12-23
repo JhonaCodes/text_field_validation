@@ -1,4 +1,4 @@
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:text_field_validation/src/entity/text_validate_response.dart';
 
 import 'package:text_field_validation/src/validation/text_field_validation.dart';

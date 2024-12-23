@@ -1,6 +1,9 @@
 # Changelog
 
-### Version 1.1.3
+### Version 1.1.5
+- Password minimum 9 characters.
+---
+### Version 1.1.4
 - Dart format.
 ---
 ### Version 1.1.2
